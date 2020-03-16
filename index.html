@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Coding Quiz Challenge</title>
+</head>
+
+<body>
+    <header>
+        <div class="navBar">
+            <button id="homeBtn" style="display: inline-block">Home</button>
+            <button id="navHighscores" style="display: inline-block">View Highscores</button>
+            <div id="navTimer" style="display: block">Time: 0</div>
+        </div>
+
+    </header>
+    <div class="container">
+        <div id="startContainer">
+            <h1>Coding Quiz Challenge</h1>
+            <p>
+                Answer the following code-related questions within the time limit.
+            </p>
+
+            <button id="btnStart">Start Quiz</button>
+        </div>
+
+        <div id="gameContainer" class="hide">
+            <h1 id="question">Some Question Here</h1>
+            <div id="answerChoices"></div>
+        </div>
+
+        <div id="scoresContainer" class="hide">
+            <h1>High Scores</h1>
+        </div>
+    </div>
+
+    <script src="./questions.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>

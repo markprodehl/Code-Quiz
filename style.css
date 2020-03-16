@@ -1,0 +1,41 @@
+    html {
+        font-size: 18px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    body {
+        margin: 0;
+        padding: 0;
+        font-weight: normal;
+    }
+    
+    .hide {
+        display: none;
+    }
+    
+    .container,
+    #startContainer {
+        width: 900px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    h1 {
+        font-size: 3em;
+    }
+    
+    #btnStart,
+    button {
+        background-color: #8acbfd;
+        padding: 15px;
+    }
+    
+    #navTimer {
+        float: right;
+        color: black;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        margin-right: 40px;
+    }
