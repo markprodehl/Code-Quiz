@@ -9,6 +9,8 @@ var btnStart = document.getElementById('btnStart')
 var btnHighScores = document.getElementById('navHighscores')
 var btnHome = document.getElementById('homeBtn')
 
+var navTimer = document.getElementById("navTimer"); //new
+
 var qIndex = 0;
 
 
@@ -18,9 +20,41 @@ btnHome.addEventListener("click", displayHome)
 
 //starts the quiz by clicking the start quiz button
 btnStart.addEventListener("click", displayQuestion);
-
+btnStart.addEventListener("click", startTimer); //
 
 displayQuestion();
+
+//
+var secondsLeft = 5 //
+
+var timerInterval
+
+function startTimer() {
+    timerInterval = setInterval(function() {
+        secondsLeft--;
+        navTimer.textContent = secondsLeft + " second to go ";
+
+        // if there are 0 seconds 
+        if (secondsLeft === 0) {
+            //stop the timer
+            clearInterval(timerInterval);
+            // add an end here
+
+
+        }
+
+
+
+        //funcion to display end screen
+        // if statement
+        // start or new page
+    }, 1000);
+
+
+
+
+
+}
 
 
 
