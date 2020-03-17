@@ -24,7 +24,7 @@ btnStart.addEventListener("click", startTimer); //
 
 displayQuestion();
 
-//
+//TIMER///
 var secondsLeft = 5 //
 
 var timerInterval
@@ -32,30 +32,22 @@ var timerInterval
 function startTimer() {
     timerInterval = setInterval(function() {
         secondsLeft--;
-        navTimer.textContent = secondsLeft + " second to go ";
+        navTimer.textContent = secondsLeft + " Seconds Remaining!";
 
         // if there are 0 seconds 
         if (secondsLeft === 0) {
             //stop the timer
             clearInterval(timerInterval);
             // add an end here
-
-
+            navTimer.textContent = "Your time is UP!";
         }
-
-
-
         //funcion to display end screen
         // if statement
         // start or new page
     }, 1000);
 
-
-
-
-
 }
-
+//*********** */
 
 
 function displayQuestion() {
@@ -118,19 +110,19 @@ function displayHighScores() {
     scoresContainer.classList.remove('hide')
 }
 
-var questions = [{
-        question: "Which of the following is a Javascript primitive",
-        choices: ["Strings", "Arrays", "Numbers", "Booleans"],
-        answer: "Arrays"
-    },
-    {
-        question: "Two",
-        choices: ["One", "Two", "Three"],
-        answer: "Two"
-    },
-    {
-        question: "Three",
-        choices: ["One", "Two", "Three"],
-        answer: "Three"
-    },
-]
+// var questions = [{
+//         question: "Which of the following is a Javascript primitive",
+//         choices: ["Strings", "Arrays", "Numbers", "Booleans"],
+//         answer: "Arrays"
+//     },
+//     {
+//         question: "Two",
+//         choices: ["One", "Two", "Three"],
+//         answer: "Two"
+//     },
+//     {
+//         question: "Three",
+//         choices: ["One", "Two", "Three"],
+//         answer: "Three"
+//     },
+// ]
