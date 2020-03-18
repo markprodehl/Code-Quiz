@@ -33,7 +33,7 @@ var questions = [{
             "setAttribute",
             "getElementById"
         ],
-        answer: "Converts an object to a string"
+        answer: "getElementById"
 
     },
 ]
