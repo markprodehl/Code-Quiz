@@ -25,7 +25,7 @@ btnStart.addEventListener("click", startTimer); //
 displayQuestion();
 
 //TIMER///
-var secondsLeft = 5 //
+var secondsLeft = 3 //
 
 var timerInterval
 
@@ -38,6 +38,14 @@ function startTimer() {
         if (secondsLeft === 0) {
             //stop the timer
             clearInterval(timerInterval);
+            displayHighScores()
+
+            // need to call a finish function 
+            //(checking my high scores)
+
+            //(display high score page)
+            //promt user to press the home button
+
             // add an end here
             navTimer.textContent = "Your time is UP!";
         }
@@ -108,7 +116,10 @@ function displayHighScores() {
     startContainer.classList.add('hide')
     gameContainer.classList.add('hide')
     scoresContainer.classList.remove('hide')
+    document.querySelector("#scoresContainer").textContent = "Your score is "
+        //console.log the scrore from somwhere.
 }
+
 
 // var questions = [{
 //         question: "Which of the following is a Javascript primitive",

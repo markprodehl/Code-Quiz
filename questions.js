@@ -8,7 +8,7 @@ var questions = [{
         answer: "Arrays"
     },
     {
-        question: "Which one of teh follwing is used to create an unordered list",
+        question: "Which one of the follwing is used to create an unordered list",
         choices: ["<li>",
             "<i>",
             "<ui>",
@@ -27,7 +27,7 @@ var questions = [{
 
     },
     {
-        question: "DOM method used to return the element that has the ID attribute with the specified value.",
+        question: "What is the DOM method used to return the element that has the ID attribute with the specified value.",
         choices: ["Append",
             "createElement",
             "setAttribute",
