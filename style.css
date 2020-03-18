@@ -4,7 +4,7 @@
     }
     
     body {
-        background-color: lightgrey;
+        background-color: whitesmoke;
         margin: 0;
         padding: 0;
         font-weight: normal;
@@ -53,7 +53,7 @@
         font-size: 17px;
         margin-top: 20px;
         margin-right: 40px;
-        background-color: red;
+        background-color: orange;
         width: 180px;
     }
     
