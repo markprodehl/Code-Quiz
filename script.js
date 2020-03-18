@@ -8,13 +8,11 @@ var answersEl = document.getElementById('answerChoices')
 var btnStart = document.getElementById('btnStart')
 var btnHighScores = document.getElementById('navHighscores')
 var btnHome = document.getElementById('homeBtn')
-
 var navTimer = document.getElementById("navTimer"); //new
 
 var scoreCounter = localStorage.getItem("scoreCounter");
 
 var qIndex = 0;
-
 
 btnStart.addEventListener("click", displayGame)
 btnHighScores.addEventListener("click", displayHighScores)
@@ -24,10 +22,8 @@ btnHome.addEventListener("click", displayHome)
 btnStart.addEventListener("click", displayQuestion);
 btnStart.addEventListener("click", startTimer); //
 
-// displayQuestion();
-
 //TIMER///
-var secondsLeft = 10 //
+var secondsLeft = 60 //
 
 var timerInterval
 
@@ -40,30 +36,14 @@ function startTimer() {
         if (secondsLeft <= 0) {
             //stop the timer
             clearInterval(timerInterval);
-            secondsLeft = 10
+            secondsLeft = 60
             displayHighScores()
 
-
-            // need to call a finish function 
-            //(checking my high scores)
-
-            //(display high score page)
-            //promt user to press the home button
-
-            // add an end here
             navTimer.textContent = "Your time is UP!";
-
-
         }
-
-        //funcion to display end screen
-        // if statement
-        // start or new page
     }, 1000);
 
 }
-//*********** */
-
 
 function displayQuestion() {
 
@@ -71,7 +51,6 @@ function displayQuestion() {
 
     var currentQuestion = questions[qIndex]
 
-    // console.log(currentQuestion) //
     var question = currentQuestion.question
     var choices = currentQuestion.choices
 
@@ -87,7 +66,7 @@ function displayQuestion() {
     }
 }
 var answerCorrect = 0
-    //ternary operation -- if highscore is exists (true) is found; then use that score. If not then use answercorrect
+    //ternary operation -- if highscore is exists i.e true in local storage, then use that score. If not then use answercorrect
 var highScore = localStorage.getItem("highScore") ? localStorage.getItem("highScore") : answerCorrect
 
 function clickChoice() {
@@ -100,16 +79,9 @@ function clickChoice() {
         answerCorrect++
         console.log(answerCorrect);
 
-
-
-
-
     } else {
         console.log("INCORRECT")
-
     }
-
-
 
     qIndex++;
 
@@ -132,15 +104,9 @@ function clickChoice() {
         } else {
             // If answerCorrect isn't higher than highScore, display the latest highScore
             displayHighScores()
-
-
         }
     }
-
-
 }
-
-
 
 function displayHome() {
     startContainer.classList.remove('hide')
@@ -148,7 +114,7 @@ function displayHome() {
     scoresContainer.classList.add('hide')
     qIndex = 0
     answerCorrect = 0
-    secondsLeft = 10
+    secondsLeft = 60
 }
 
 function displayGame() {
@@ -161,8 +127,6 @@ function displayHighScores() {
     startContainer.classList.add('hide')
     gameContainer.classList.add('hide')
     scoresContainer.classList.remove('hide')
-    document.querySelector("#scoresContainer").textContent = "Your highest score so far is " + highScore
+    document.querySelector("#scoresContainer").textContent = "Your highest score so far is " + highScore + " out of 5"
     navTimer.textContent = "Your time is UP!"
-
-    //console.log the scrore from somwhere.
 }
